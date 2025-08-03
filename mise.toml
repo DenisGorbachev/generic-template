@@ -1,0 +1,16 @@
+min_version = "2025.1.14"
+
+[tools]
+"npm:lefthook" = "1.8.5"
+"npm:@commitlint/config-conventional" = "19.6.0"
+"npm:@commitlint/cli" = "19.6.0"
+"npm:@commitlint/types" = "19.5.0"
+
+[tasks."fmt"]
+
+[tasks."lint"]
+
+[tasks."test"]
+
+[tasks."commitlint"]
+run = "commitlint --extends \"$(mise where npm:@commitlint/config-conventional)/lib/node_modules/@commitlint/config-conventional/lib/index.js\""
