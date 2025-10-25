@@ -14,3 +14,6 @@ min_version = "2025.1.14"
 
 [tasks."commitlint"]
 run = "commitlint --extends \"$(mise where npm:@commitlint/config-conventional)/lib/node_modules/@commitlint/config-conventional/lib/index.js\""
+
+[tasks."agent:on:stop"]
+depends = ["fmt", "lint", "test"]
